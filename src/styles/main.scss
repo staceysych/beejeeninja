@@ -1,0 +1,46 @@
+@import "normalize.css";
+@import "sanitize.css";
+@import "fontface.css";
+@import "antd/dist/antd.css";
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "OpenSans-Regular", sans-serif;
+  color: $textColor;
+  height: 100%;
+}
+
+#app {
+  min-height: 100%;
+  position: relative;
+}
+
+.container {
+  padding: 5px 20px;
+  height: 100%;
+  position: relative;
+  max-width: 1050px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.active {
+  &::after {
+    left: 0;
+    width: 100%;
+  }
+}
+
+.success {
+  background: $successColor;
+  color: $textColor;
+}
+
+#addTaskBtn {
+  height: 25px;
+  display: flex;
+  align-items: center;
+}
