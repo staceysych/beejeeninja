@@ -262,20 +262,6 @@ module.exports = function (_env, argv) {
       }),
       new CleanPlugin.CleanWebpackPlugin(), // it cleans output folder before extracting files
       // it copies files like images, fonts etc. from 'public' path to 'destPath' (since not every file will be injected into css and js)
-      new CopyWebpackPlugin({
-        patterns: [
-          {
-            from: assetsPath,
-            to: destPath,
-            toType: "dir",
-          },
-          {
-            from: "src/assets/images",
-            to: "images/",
-            toType: "dir",
-          },
-        ],
-      }),
       new webpack.ProgressPlugin(), // it shows progress of building
       new webpack.ProvidePlugin({
         React: "react", // optional: react. it adds [import React from 'react'] as ES6 module to every file into the project
